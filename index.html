@@ -22,6 +22,14 @@
     a {
       color: #fff;
     }
+
+    #contact {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -35,15 +43,20 @@
       <a href="./timehub.crx"><strong>点击这里下载</strong></a>
     </li>
   </ul>
+  <div id="contact">联系我</div>
+
   <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-105662576-1', 'auto');
-      ga('send', 'pageview');
-    
-    </script>
+    document.getElementById('contact').onclick=function() {
+      location.href='mailto:'+['h4av','.','one','@gmail.com'].join('')
+    };
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105662576-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-105662576-3');
+  </script>
 </body>
 </html>
